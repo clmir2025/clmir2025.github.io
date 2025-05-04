@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CLMIR 2025</title>
+    <meta charset="utf-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="16x40" href="CLMIR-1_Logo.png">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        /* Add a gray background color and some padding to the footer */
+        
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        p {
+            font-size: 20px;
+        }
+        
+        .nav a.active {
+            background-color: #078186;
+            color: white;
+        }
+        
+        .nav a {
+            color: black;
+            font-size: 18px;
+        }
+        
+        .nav a:hover {
+            color: #078186;
+        }
+        
+        .nav-test {
+            background-color: #f2f2f2;
+            padding: 20px
+        }
+        
+        .panel-group {
+            padding: 5px
+        }
+        
+        .jumbotron {
+            position: relative;
+        }
+        
+        #logo {
+            position: absolute;
+            top: 1px;
+            left: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="jumbotron">
+        <div class="container text-center">
+            <img src="CLMIR-1_Logo.png" alt="CLMIR" heigh=20% width=20%>
+            <h1>CLMIR 2025</h1>
+            <p>Crosslingual Mathematical Information Retrieval</p>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container-fluid bg-2">
+
+        <div class="row ">
+
+            <div class="col-sm-2 nav-test">
+                <ul class="nav nav-pills nav-stacked ">
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="index.html">Track Description<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="dataset.html">Dataset</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registration.html">Registration</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="important_dates.html">Important dates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="announcement.html">Announcement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="organizers.html">Organizers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="results.html">Results</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-9">
+
+                <div class="panel-group" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="tab_148">
+                            <h3 class="panel-title" style="color:#078186; font-size: 25px;">
+
+                                <b>Overview</b>
+
+
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>
+
+                                Mathematical Information Retrieval (MIR) is a research domain that focuses on retrieving relevant mathematical expressions, equations, and documents based on user queries. 
+                                However, most existing mathematical information retrieval systems operate within a single language, limiting accessibility for users working in multilingual environments. 
+                                Cross-Lingual Mathematical Information Retrieval (CLMIR) aims to bridge this gap by developing systems that retrieve mathematical content across different languages. 
+                                This task focuses on English-Hindi cross-lingual retrieval, helping users find mathematical content in one language even if it was originally written in another. 
+                                Many Hindi-speaking students and researchers struggle to access high-quality study materials and research papers because most of them are in English. Similarly,
+                                valuable mathematical content written in Hindi remains inaccessible to English speakers. The challenge in building such a system lies in accurately translating mathematical 
+                                expressions and text, understanding queries in both languages, matching mathematical concepts correctly, and overcoming the lack of large bilingual datasets.
+                                
+                                <H3>Dataset Desrciption:</H3>
+                                The dataset for the CLMIR 2025 task is curated from the Math Stack Exchange corpus from ARQMath-1 and contains approximately 50,000 instances (Training Data). The dataset is formatted to include 
+                                the body of scientific information which contains mathematical equations, expressions, and supporting textual descriptions in Hindi language and its associated document ID. 
+                                To assess the performance of participants, 10 formula and text-based queries in English language (Validation Data) and 50 formula and text-based queries in English (Test Data) shall be provided. Participants are expected
+                                to submit a results file containing the relevant search results corresponding to each query.
+                                <br><br> The use case example demonstrates how the CLMIR system retrieves relevant mathematical content across languages. It shows a query in English and the corresponding relevant and irrelevant results 
+                                in Hindi, highlighting the system’s ability to match both mathematical expressions and textual meaning accurately. 
+
+                                <ul>
+                                    <li>
+                                        <p> Query (English: Text + Formula): What is the integral of  ex? ∫ex dx </p>
+                                    </li>
+
+                                    <li>
+                                        <p> CLMIR System Generated Results</p>
+                                        <ol>
+                                <li>Document 1 (Relevant): <br>
+समाकलन के मूल नियमों के अनुसार, यदि किसी फलन का अवकलन f(x) हो, तो उसका समाकलन हमें मूल फलन वापस देता है। 
+इसी आधार पर, चूंकि ex का अवकलन स्वयं e<sup>x</sup>होता है, इसलिए उसका समाकलन भी वही रहेगा:
+∫e<sup>x</sup> dx = e<sup>x</sup> + C
+                               </li>
+                                <li>Document 3 (Irrelevant): <br>
+                                    x<sup>2</sup>का समाकलन इस प्रकार है:
+                                     ∫x<sup>2</sup> dx = ( x<sup>3</sups>)/3 + C
+                                 </li>
+                                <li>Document 3 (Irrelevant): <br>
+                                    x<sup>2</sup>sup>का समाकलन इस प्रकार है:
+                                     ∫x<sup>2</sup> dx = ( x<sup>3</sup>)/3 + C
+                                </li>   
+                                 <li> Document 4 (Irrelevant):<br>
+                                    ln(x) का अवकलज इस प्रकार है:
+                                     d/dx (lnx) = 1/x
+                                 </li>  
+                                    
+                                        </ol>
+                                    </li>
+                            </ul>  
+                                    <br>
+                               <H3>Target Audience and number of expected submissions guidelines:</H3> <br>   
+                                The CLMIR 2025 task aims to engage participants from both academia and industry, 
+                                including students, researchers, and academicians specializing in information retrieval,
+                                mathematical information retrieval, cross-lingual retrieval, and computational linguistics. 
+                                It also seeks to attract industry professionals working on multilingual mathematical retrieval systems,
+                                promoting collaboration between research and industry. To ensure fairness and consistency,
+                                a participant cannot be a member of more than one team. Each team is required to submit a minimum 
+                                of one run and may submit up to a maximum of three runs for evaluation. Participants are required to 
+                                submit their results in a CSV (Comma-Separated Values) file format. The CSV file must follow the structure
+                                and column naming conventions with the following fields: QueryID, DocumentID, Run Number, and Similarity Score.
+                                <ul>
+                                     <ol>Query ID: Represents the unique identifier of the query </ol>
+                                     <ol>Run no: Indicates the run number submitted by the participant (e.g., 1 for the first run)</ol>
+                                     <ol>DocumentID: Denotes the identifier of the retrieved result corresponding to the query</ol>
+                                     <ol>Similarity Score: A numerical value indicating the similarity between the query and the retrieved result</ol>
+                                </ul>    
+                            
+
+                        </div>
+                        <div class="panel-heading" role="tab" id="tab_148">
+                            <h3 class="panel-title" style="color:#078186; font-size: 25px;">
+
+                                <b>Registration / Participation Guidelines:</b>
+                            </h3>
+                        </div>
+
+                        <br>
+                        <ol style="font-size: 20px;">
+                            <li>Only one registration per team is required. Please ensure that the team information is complete at the time of registration.</b></li>
+                            <li>Each team can have <b>at most 4 participants</b></li>
+                            <li> Each team must have at least one member </b></li>
+                            <li>A team can submit up to <b>3 different runs</b> But <b>only one working note</b> </li>
+                            <li> Each team is required to submit a detailed description of their algorithm(s) </li>
+                            <li> Participants are allowed to use any external pretrained models
+                        </ol>
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <br>
+    </br>
+    <footer class="sticky-footer">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <h3><span>For any queries write to us at <b><a href = "mailto: clmir.fire@gmail.com"> clmir.fire@gmail.com </a></b>
+               </h3>
+            </div>
+            <div class="copyright text-center my-auto">
+                <span><h4>Copyright © CLMIR 2025</h4></span>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
